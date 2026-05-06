@@ -54,8 +54,12 @@ app.include_router(draft.router)
 app.include_router(contacts.router)
 
 @app.get("/")
+def root():
+    return {"status": "active", "service": "DantaLabs Backend Running"}
+
+@app.get("/health")
 def health_check():
-    return {"status": "active", "service": "DantaLabs Backend Running 🚀"}
+    return {"status": "ok"}
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
