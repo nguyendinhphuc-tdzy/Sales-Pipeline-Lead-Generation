@@ -1,0 +1,106 @@
+{
+  "scan_request": {
+    "keyword": "Marketing Agency",
+    "location": "Ho Chi Minh City",
+    "limit": 5
+  },
+  "scan_response": {
+    "success": true,
+    "count": 2,
+    "is_fallback": false,
+    "data": [
+      {
+        "name": "DigiTech Solutions",
+        "website_url": "https://digitech.example.com",
+        "google_maps_url": "https://maps.google.com/?cid=123456789",
+        "industry": "Marketing Agency",
+        "address": "123 Nguyen Hue, District 1, Ho Chi Minh City, Vietnam",
+        "phone": "+84 28 1234 5678",
+        "has_ssl": true,
+        "pagespeed_score": 45,
+        "is_wordpress": true,
+        "crm_system": null,
+        "tech_stack": {
+          "cms": ["WordPress"],
+          "frontend": ["React"],
+          "ecommerce": [],
+          "agents": []
+        },
+        "emails": ["contact@digitech.example.com"],
+        "socials": {
+          "linkedin": "https://linkedin.com/company/digitech",
+          "facebook": "https://facebook.com/digitech"
+        },
+        "description": "Digital marketing agency specializing in SEO and content marketing.",
+        "status": "QUALIFIED",
+        "disqualify_reason": null,
+        "search_keyword": "Marketing Agency Ho Chi Minh City"
+      },
+      {
+        "name": "Global Reach Media",
+        "website_url": "https://globalreach.example.vn",
+        "google_maps_url": "https://maps.google.com/?cid=987654321",
+        "industry": "Marketing Agency",
+        "address": "456 Le Duan, District 3, Ho Chi Minh City, Vietnam",
+        "phone": "+84 28 8765 4321",
+        "has_ssl": true,
+        "pagespeed_score": 78,
+        "is_wordpress": false,
+        "crm_system": "HubSpot",
+        "tech_stack": {
+          "cms": ["Custom"],
+          "frontend": ["Next.js"],
+          "ecommerce": [],
+          "agents": ["Intercom"]
+        },
+        "emails": ["info@globalreach.example.vn"],
+        "socials": {
+          "linkedin": "https://linkedin.com/company/globalreach"
+        },
+        "description": "Full-service marketing agency with international clients.",
+        "status": "DISQUALIFIED",
+        "disqualify_reason": "High Performance Site",
+        "search_keyword": "Marketing Agency Ho Chi Minh City"
+      }
+    ]
+  },
+  "enrich_request": {
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "companyName": "DigiTech Solutions"
+  },
+  "enrich_response": {
+    "success": true,
+    "data": [
+      {
+        "full_name": "Alex Nguyen",
+        "position": "CEO & Founder",
+        "linkedin_url": "https://linkedin.com/in/alexnguyen",
+        "email": null,
+        "is_primary_decision_maker": true
+      },
+      {
+        "full_name": "Minh Tran",
+        "position": "Marketing Director",
+        "linkedin_url": "https://linkedin.com/in/minhtranmarketing",
+        "email": null,
+        "is_primary_decision_maker": true
+      }
+    ]
+  },
+  "draft_request": {
+    "contactName": "Alex Nguyen",
+    "position": "CEO & Founder",
+    "companyName": "DigiTech Solutions",
+    "website": "https://digitech.example.com",
+    "industry": "Marketing Agency",
+    "hasSSL": true,
+    "pageSpeed": 45
+  },
+  "draft_response": {
+    "success": true,
+    "data": {
+      "subject": "Boost Your Agency's Performance - From 45 to 85 PageSpeed",
+      "body": "Hi Alex,\n\nI noticed your agency at digitech.example.com is leaving potential clients on the table.\n\nWith a PageSpeed score of just 45, prospects are bouncing before they even see your portfolio. Most agencies in your space are hitting 80+.\n\nWe've helped marketing firms like yours cut load times by 60% in under two weeks - without touching your WordPress setup.\n\nWould a 3-minute walkthrough of how this works fit your calendar this Thursday?\n\nBest,\nSam\nDanta Labs"
+    }
+  }
+}

@@ -26,10 +26,18 @@ app = FastAPI(
 )
 
 # Cấu hình CORS (Để Frontend Next.js gọi được)
+# Thêm domain Vercel production vào đây
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    # Thêm Vercel production URL sau khi deploy
+    # "https://your-frontend.vercel.app",
 ]
+
+# Hỗ trợ CORS từ environment variable cho production flexibility
+if os.getenv("CORS_ORIGINS"):
+    additional_origins = [o.strip() for o in os.getenv("CORS_ORIGINS").split(",")]
+    origins.extend(additional_origins)
 
 app.add_middleware(
     CORSMiddleware,

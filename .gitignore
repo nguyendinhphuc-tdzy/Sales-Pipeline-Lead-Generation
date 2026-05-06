@@ -30,8 +30,32 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (do NOT commit real .env files with secrets)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# python - virtual environment
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+
+# python - cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/__pycache__/
+
+# pip/pipenv
+*.egg-info/
+dist/
+build/
+*.egg
 
 # vercel
 .vercel
@@ -39,3 +63,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# logs
+*.log
+logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
