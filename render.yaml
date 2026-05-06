@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: dantalabs-backend
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: APOFY_API_TOKEN
+        sync: false
