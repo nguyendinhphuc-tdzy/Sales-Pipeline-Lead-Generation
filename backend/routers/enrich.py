@@ -53,9 +53,6 @@ async def enrich_company(payload: EnrichRequest):
         if not response_text:
             return {"success": False, "message": "AI could not find information."}
 
-        if not response_text:
-            return {"success": False, "message": "AI could not find information."}
-
         # 3. Clean & Parse JSON (Sử dụng Helper mới)
         parsed_contacts = gemini_client.clean_and_parse_json(response_text)
 

@@ -59,9 +59,6 @@ async def generate_draft(payload: DraftRequest):
         if not response_text:
              raise Exception("AI returned empty response")
 
-        if not response_text:
-             raise Exception("AI returned empty response")
-
         draft_data = gemini_client.clean_and_parse_json(response_text)
         if not draft_data:
              raise Exception("Failed to parse AI response")

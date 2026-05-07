@@ -51,8 +51,8 @@ class TechStackDetector:
 
     def _empty_result(self):
         return {
-            "cms": [], "frontend": [], "server": [], "ecommerce": [], 
-            "crm": [], "analytics": [], "is_wordpress": False
+            "cms": [], "frontend": [], "server": [], "ecommerce": [],
+            "crm": [], "analytics": [], "agents": [], "is_wordpress": False
         }
 
     def _detect_cms(self, html: str, headers: dict, soup: BeautifulSoup):

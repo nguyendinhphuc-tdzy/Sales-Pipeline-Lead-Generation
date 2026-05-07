@@ -22,7 +22,7 @@ router = APIRouter(prefix="/scan", tags=["Scanning"])
 url = os.getenv("SUPABASE_URL")
 key = os.getenv("SUPABASE_KEY")
 if not url or not key:
-    print("⚠️ WARNING: SUPABASE_URL or KEY is missing in scan.py")
+    raise RuntimeError("Missing SUPABASE_URL or SUPABASE_KEY environment variables")
 
 supabase: Client = create_client(url, key)
 apify_client = ApifyClient(os.getenv("APIFY_API_TOKEN"))

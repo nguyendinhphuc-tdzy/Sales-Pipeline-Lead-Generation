@@ -1,6 +1,6 @@
 -- Add description column to companies table
 ALTER TABLE companies 
-ADD COLUMN IF NOT EXISTS description VIDEO;
+ADD COLUMN IF NOT EXISTS description TEXT;
 
 -- Note: Using TEXT type for description as it can be long
 ALTER TABLE companies 
